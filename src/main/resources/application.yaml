@@ -10,3 +10,12 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+openai:
+  api:
+    key: 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

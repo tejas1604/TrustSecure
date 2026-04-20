@@ -1,14 +1,25 @@
 package com.sec.trustsecure;
 
+import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.sec.trustsecure.repository.FirewallLogRepository;
 import com.sec.trustsecure.entity.FirewallLog;
+
 import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+
 @SpringBootApplication
 public class TrustsecureApplication implements CommandLineRunner {
+
+    public static void main(String[] args) {
+        SpringApplication.run(TrustsecureApplication.class, args);
+    }
 
     private final FirewallLogRepository repository;
 
@@ -16,29 +27,8 @@ public class TrustsecureApplication implements CommandLineRunner {
         this.repository = repository;
     }
 
-    public static void main(String[] args) {
-        SpringApplication.run(TrustsecureApplication.class, args);
-    }
-
     @Override
     public void run(String... args) {
-    	
-    	BufferedReader bf = new BufferedReader("C:/Windows/System32/LogFiles/firewall/pfirewall.log");
-    	
-        FirewallLog log = new FirewallLog(
-                "2026-02-22",
-                "13:30",
-                "192.168.1.10",
-                "443",
-                "10.0.0.5",
-                "51515",
-                "ALLOW",
-                "12345"
-        );
-
-        repository.save(log);
-
-        System.out.println("Inserted successfully.");
-        System.out.println("Total rows in DB: " + repository.count());
+        System.out.println("App started. Waiting for file upload...");
     }
 }

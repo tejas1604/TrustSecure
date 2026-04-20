@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+.low { color: #22c55e; }
+.medium { color: #facc15; }
+.high { color: #fb923c; }
+.critical { color: #ef4444; }
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #22c55e;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+.link {
+    display: block;
+    margin-top: 20px;
+    color: #38bdf8;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #1e293b;
+}
+
+tr {
+    border-bottom: 1px solid #334155;
+}
+
+tr:hover {
+    background: #334155;
+}
+
+/* Risk colors */
+

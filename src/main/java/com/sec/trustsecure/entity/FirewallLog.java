@@ -15,7 +15,7 @@ public class FirewallLog {
 	String destIp;
 	String sourcePort;
 	String destPort;
-		
+	private String risk;
 	public FirewallLog(String date, String time, String action, String protocol, String sourceIp, String destIp,
 			String parts, String parts2) {
 		
@@ -29,5 +29,44 @@ public class FirewallLog {
 		this.destPort = parts2;
 		
 	}
+	 public String getRisk() {
+	        return risk;
+	    }
+	 public String getField1() {
+		    return date;
+		}
+
+		public String getField2() {
+		    return time;
+		}
+
+		public String getField3() {
+		    return action;
+		}
+
+		public String getField4() {
+		    return protocol;
+		}
+
+		public String getField5() {
+		    return sourceIp;
+		}
+
+		public String getField6() {
+		    return destIp;
+		}
+
+		public String getField7() {
+		    return sourcePort;
+		}
+
+		public String getField8() {
+		    return destPort;
+		}
+
+		
+	    public void setRisk(String risk) {
+	        this.risk = risk;
+	    }
 	public FirewallLog() {}
 }
